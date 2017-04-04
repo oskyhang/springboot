@@ -1,12 +1,11 @@
 package com.oskyhg.springboot.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.oskyhg.springboot.entity.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.oskyhg.springboot.entity.Person;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/login")
@@ -25,7 +24,9 @@ public class LoginController {
 		List<Person> list = new ArrayList<Person>();
 		list.add(p);
 		list.add(p2);
-
+		System.out.println(123456);
+		System.out.println(123456);
+		System.out.println(123456);
 		return p;
 	}
 }
