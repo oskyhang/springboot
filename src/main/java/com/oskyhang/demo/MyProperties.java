@@ -1,4 +1,4 @@
-package com.oskyhg.demo;
+package com.oskyhang.demo;
 
 import org.springframework.stereotype.Component;
 
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MyProperties {
-    @
     private String  cnName;
     private String engName;
 

@@ -1,4 +1,4 @@
-package com.oskyhg.springboot.entity;
+package com.oskyhang.springboot.entity;
 
 public class User {
 

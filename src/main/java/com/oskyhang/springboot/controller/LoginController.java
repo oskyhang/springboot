@@ -1,8 +1,9 @@
-package com.oskyhg.springboot.controller;
+package com.oskyhang.springboot.controller;
 
-import com.oskyhg.springboot.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.oskyhang.springboot.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;

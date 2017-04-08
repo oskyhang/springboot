@@ -1,8 +1,9 @@
-package com.oskyhg.demo;
+package com.oskyhang.demo;
 
-import com.oskyhg.springboot.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.oskyhang.springboot.entity.User;
 
 /**
  * description: 返回JSON格式的controller
@@ -15,6 +16,7 @@ public class JSONController {
     @RequestMapping("/getUser")
     public User getUser() {
         User user=new User();
+        
         user.setUsername("小明");
         user.setPassword("xxxx");
         return user;
