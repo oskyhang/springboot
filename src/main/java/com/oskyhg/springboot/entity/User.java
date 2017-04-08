@@ -1,6 +1,6 @@
 package com.oskyhg.springboot.entity;
 
-public class Person {
+public class User {
 
 	private String username;
 	private String password;

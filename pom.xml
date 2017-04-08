@@ -35,18 +35,24 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+		<!--开发环境的调试-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 	
 	
 	<build>
 	
 	    <plugins>
-	    <!-- 作为可执行jar包 -->
+	    	<!-- 作为可执行jar包 -->
 	    	<plugin>
 		        <groupId>org.springframework.boot</groupId>
 		        <artifactId>spring-boot-maven-plugin</artifactId>
 	    	</plugin>
 	    </plugins>
-	    
+
    </build>
 </project>
