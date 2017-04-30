@@ -1,9 +1,8 @@
-package com.oskyhang.demo;
+package com.demo;
 
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +14,7 @@ import java.io.IOException;
  * date: 2017/4/8
  */
 
-@Configuration
+//@Configuration
 public class MyFilters {
     @Bean
     public RemoteIpFilter remoteIpFilter() {
@@ -24,6 +23,7 @@ public class MyFilters {
 
     @Bean
     public FilterRegistrationBean testFilterRegistration() {
+        System.out.println("-------------------filter is FilterRegistrationBean ");
 
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new MyFilter());
@@ -31,6 +31,7 @@ public class MyFilters {
         registration.addInitParameter("paramName", "paramValue");
         registration.setName("MyFilter");
         registration.setOrder(1);
+
         return registration;
     }
 }
@@ -43,12 +44,12 @@ class MyFilter implements Filter {
     public void doFilter(ServletRequest srequest, ServletResponse sresponse, FilterChain filterChain)
             throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) srequest;
-        System.out.println("this is MyFilter,url :"+request.getRequestURI());
+        System.out.println("------------------this is MyFilter,url :"+request.getRequestURI());
         filterChain.doFilter(srequest, sresponse);
     }
 
     @Override
     public void init(FilterConfig arg0) throws ServletException {
-        System.out.println("filter is init ");
+        System.out.println("-------------------filter is init ");
     }
 }
